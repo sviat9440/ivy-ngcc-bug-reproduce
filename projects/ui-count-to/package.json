@@ -1,0 +1,13 @@
+{
+    "name": "@front-polis/ui-count-to",
+    "version": "1.0.0",
+    "peerDependencies": {
+        "@angular/common": "~11.2.3",
+        "@angular/core": "~11.2.3",
+        "@front-polis/ui-pipes": "^1.0.0"
+    },
+    "dependencies": {
+        "angular2-counto": "^1.2.5",
+        "tslib": "^2.0.0"
+    }
+}

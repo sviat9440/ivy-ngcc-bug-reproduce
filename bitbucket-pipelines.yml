@@ -1,0 +1,17 @@
+image: andreywv/node-chrome
+
+pipelines:
+  default:
+      - step:
+          name: Build projects
+          caches:
+            - node
+          script:
+            - npm set registry "$NPM_REGISTRY_PROTOCOL://$NPM_REGISTRY"
+            - echo "//$NPM_REGISTRY/:_authToken=\"$NPM_TOKEN\"" > .npmrc
+            - npm whoami
+            - npm install
+            - npm run build
+            - npm run test
+          artifacts:
+            - dist/**

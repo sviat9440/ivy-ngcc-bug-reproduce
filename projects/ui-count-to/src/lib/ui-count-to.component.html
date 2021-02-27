@@ -1,0 +1,8 @@
+<ng-container (countoChange)="countChange($event)"
+              [countFrom]="String(uiCountFrom)"
+              [countTo]="String(uiCountTo)"
+              [duration]="String(uiCountDuration)"
+              [step]="String(uiCountStep)"
+              counto>
+  {{currentValue | numberFormatter}}
+</ng-container>
