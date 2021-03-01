@@ -5,10 +5,11 @@ import {
 } from '@angular/core/testing';
 import { NumberFormatterTestingPipeModule } from '@front-polis/ui-pipes/testing';
 import { CountoModule } from 'angular2-counto';
+import { TestNamespace } from '@front-polis/ui-pipes';
 import { UiCountToComponent } from './ui-count-to.component';
 
 // mod does not exists
-console.log(NumberFormatterTestingPipeModule['ɵmod']);
+console.log(TestNamespace.TestModule['ɵmod']);
 
 describe('UiCountToComponent', () => {
   let fixture: ComponentFixture<UiCountToComponent>;
@@ -19,6 +20,7 @@ describe('UiCountToComponent', () => {
       UiCountToComponent,
     ],
     imports: [
+      TestNamespace.TestModule,
       NumberFormatterTestingPipeModule,
       CountoModule,
     ],
